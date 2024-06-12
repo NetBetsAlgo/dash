@@ -1,0 +1,106 @@
+:root {
+  --background-color: #FFF;
+  --text-color: #000;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --table-background-color: #f9f9f9;
+  --table-header-color: #e0e0e0;
+  --table-row-even-color: #531c1c;
+  --table-row-odd-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 1s ease, color 2s ease;
+}
+
+.toggle-button-container {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  margin: 0 10px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  padding: 20px;
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+}
+
+.last15-chart-container {
+  flex: 2;
+  height: 500px;
+}
+
+.data-table-container {
+  flex: 1;
+  height: 540px;
+  background-color: var(--table-background-color);
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0px;
+  overflow: auto;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.data-table-container h3 {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table thead tr {
+  background-color: var(--table-header-color);
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: var(--table-row-even-color);
+}
+
+.data-table tbody tr:nth-child(odd) {
+  background-color: var(--table-row-odd-color);
+}
+
+.apex-chart-container {
+  width: 1250px;
+  height: 500px;
+  margin-top: 20px;
+}
